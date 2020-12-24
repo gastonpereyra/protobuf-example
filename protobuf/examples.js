@@ -2,11 +2,11 @@
 
 const ProtoBufLib = require('./base');
 
-const FILENAME = 'perfomance';
-const PACKAGE_NAME = 'perfomanceFile';
-const MESSAGE_NAME = 'Perfomances';
+const FILENAME = 'examples';
+const PACKAGE_NAME = 'exampleFile';
+const MESSAGE_NAME = 'Examples';
 
-module.exports = class PerfomanceProtoBufLib extends ProtoBufLib {
+module.exports = class ExamplesProtoBufLib extends ProtoBufLib {
 
 	get filename() {
 		return FILENAME;
