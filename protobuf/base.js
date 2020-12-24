@@ -18,6 +18,7 @@ module.exports = class ProtoBufLib {
 	async generateBuffer(data) {
 
 		try {
+
 			await this.load(this.fileDefinitionPath, this.packageName, this.messageName);
 
 			if(!this.isValidMessage(data))
