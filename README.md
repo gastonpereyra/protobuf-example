@@ -22,6 +22,20 @@ Ejemplo para usar Protocol Buffers en Node.js
 * Para generar el archivo basta con correr `npm run generate-file sarasa`, y genera el archivo en `encoded/sarasaEncoded.proto`
 * Para leer, `npm run decode-file sarasa`
 
+## Uso con datos random y cantidad variante
+
+En la carpeta `generator/` se pueden crear generadores de datos donde la cantidad (y los datos mismos) pueden variar, este archivo debe exportar una función que reciba el dato `size` (para el tamaño del dataset), y devolver el set de datos.
+
+Existe una entidad `perfomance` donde usa la misma estructura de datos que `example` pero se generan en diferentes cantidades (obviamente) y varia el contenido en cada ejecución.
+
+Para ejecutar la generación de archivos:
+
+* `npm run generate-file [entidad] [cantidad]`
+* genera el archivo encodeado en `encoded/[entidad].proto`
+* genera el dataset usado en `dataset/[entidad].json`
+
+Ejemplo `npm run generate-file perfomance 100000`
+
 ## Conclusión
 
 Todo muy lindo.
